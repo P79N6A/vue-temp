@@ -1,8 +1,8 @@
 module.exports = {
   "prompts": {
       "name": {
-          "type"    : "string",
-          "required": false,
+          "type"    : "input",
+          "required": true,
           "message" : "Project name",
           "default" : "vue-startup"
       },
@@ -13,7 +13,7 @@ module.exports = {
       "version": {
           "type"    : "string",
           "message" : "Project version",
-          "default" : "0.0.1"
+          "default" : "1.0.0"
       },
       "description": {
           "type"    : "string",
