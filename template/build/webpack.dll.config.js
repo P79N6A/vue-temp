@@ -1,6 +1,3 @@
-/**
- * Created by xuchao211309 on 2017/7/24.
- */
 const path = require('path');
 const webpack = require('webpack');
 
@@ -9,12 +6,7 @@ module.exports = {
         vendor: ['vue/dist/vue.common.js'
             ,'vue'
             ,'vue-router'
-            ,'vue-resource'
-            ,'element-ui'
-            ,'bootstrap'
             // , 'babel-polyfill'
-            // ,'axios'
-            // ,'vue-echarts-v3'
         ]
     },
     output: {
