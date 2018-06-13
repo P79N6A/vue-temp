@@ -53,6 +53,20 @@ module.exports = {
           "type": "confirm",
           "message": "Need image minifying in production?"
       },
+      "lint": {
+      "type": "confirm",
+      "message": "Use a linter?"
+      },
+      "lintConfig": {
+        "when": "lint",
+        "type": "list",
+        "message": "Pick a lint config",
+        "choices": [
+          "standard",
+          "airbnb",
+          "none"
+        ]
+      }
   },
   "filters": {
      "src/vuex/**/*": "state === 'vuex'",
