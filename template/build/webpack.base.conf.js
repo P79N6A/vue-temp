@@ -4,6 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const webpack = require('webpack')
+const vuxLoader = require('vux-loader')
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
@@ -13,7 +14,8 @@ function resolve(dir) {
 module.exports = {
     context: path.resolve(__dirname, '../'),
     entry: {
-        app: './src/main.js'
+        app: './src/main.js',
+        // fontAwesome: 'font-awesome-webpack!./font-awesome.config.js'
     },
     output: {
         path: config.build.assetsRoot,
@@ -74,9 +76,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DllReferencePlugin({
-            manifest: require('./vendor-manifest.json')
-        })
+        // new webpack.DllReferencePlugin({
+        //     manifest: require('./vendor-manifest.json')
+        // })
     ],
     node: {
         // prevent webpack from injecting useless setImmediate polyfill because Vue

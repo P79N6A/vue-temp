@@ -25,6 +25,9 @@ exports.cssLoaders = function (options) {
   const postcssLoader = {
     loader: 'postcss-loader',
     options: {
+      config: {
+        path: './postcss-config'
+      },
       sourceMap: options.sourceMap
     }
   }
@@ -34,12 +37,19 @@ exports.cssLoaders = function (options) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
 
     if (loader) {
-      loaders.push({
-        loader: loader + '-loader',
-        options: Object.assign({}, loaderOptions, {
-          sourceMap: options.sourceMap
+      // loaders.push({
+      //   loader: loader + '-loader',
+      //   options: Object.assign({}, loaderOptions, {
+      //     sourceMap: options.sourceMap
+      //   })
+      // })
+
+        loaders.splice(1, 0, {
+            loader: loader + '-loader',
+            options: Object.assign({}, loaderOptions, {
+                sourceMap: options.sourceMap
+            })
         })
-      })
     }
 
     // Extract CSS when that option is specified

@@ -6,6 +6,9 @@ module.exports = {
         vendor: ['vue/dist/vue.common.js'
             ,'vue'
             ,'vue-router'
+            ,'lodash'
+            ,'chimee'
+            ,'chimee-plugin-controlbar'
             // , 'babel-polyfill'
         ]
     },
